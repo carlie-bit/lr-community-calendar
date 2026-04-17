@@ -24,8 +24,8 @@ a{color:inherit;text-decoration:none}
 .sub-bar{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:#363A2E;border-top:1px solid rgba(252,251,228,0.05)}
 .sub-note{color:#99BAB4;font-size:9px;font-weight:500}
 .sub-btn{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:5px;background:#B68036;color:#FCFBE4;font-size:9px;font-weight:700;text-decoration:none}
-.filters{display:flex;flex-wrap:wrap;gap:5px;padding:8px 12px;background:#EFDBB2;border-bottom:2px solid rgba(182,128,54,0.12)}
-.fbtn{display:flex;align-items:center;gap:4px;padding:4px 10px;border-radius:16px;font-size:10px;font-weight:600;transition:all 0.2s;cursor:pointer}
+.filters{display:flex;flex-wrap:wrap;gap:4px;padding:8px 10px;background:#EFDBB2;border-bottom:2px solid rgba(182,128,54,0.12)}
+.fbtn{display:flex;align-items:center;gap:3px;padding:3px 8px;border-radius:14px;font-size:9px;font-weight:600;transition:all 0.2s;cursor:pointer}
 .day-headers{display:grid;grid-template-columns:repeat(7,1fr);background:#363A2E}
 .day-hdr{padding:6px 3px;text-align:center;color:#99BAB4;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
 .week{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid rgba(239,219,178,0.3)}
@@ -43,165 +43,196 @@ a{color:inherit;text-decoration:none}
 .pop-tm{opacity:0.7;font-size:10px;margin-bottom:2px}
 .pop-x{opacity:0.85;margin-bottom:6px;white-space:normal}
 .pop-l{display:inline-flex;align-items:center;gap:4px;color:#99BAB4;font-size:10px;font-weight:600;border-bottom:1px solid rgba(153,186,180,0.4);padding-bottom:1px;text-decoration:none}
-.gcal-section{background:#363A2E;border-top:2px solid #B68036;padding:0}
-.gcal-toggle{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;background:#363A2E}
+.gcal-section{background:#363A2E;border-top:2px solid #B68036}
+.gcal-toggle{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer}
 .gcal-toggle:hover{background:rgba(252,251,228,0.03)}
 .gcal-label{color:#EFDBB2;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
 .gcal-arrow{color:#99BAB4;font-size:14px;transition:transform 0.3s}
 .gcal-arrow.open{transform:rotate(180deg)}
-.gcal-body{overflow:hidden;transition:max-height 0.4s ease}
-.gcal-body.closed{max-height:0}
+.gcal-body{overflow:hidden;max-height:0;transition:max-height 0.4s ease}
 .gcal-body.open{max-height:600px}
-.gcal-frame{width:100%;height:500px;border:none;background:#fff}
-.legend{padding:12px 16px;background:#363A2E;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center}
-.li{display:flex;align-items:center;gap:5px}
-.ls{width:9px;height:9px;border-radius:2px;display:inline-block;border:1px solid rgba(252,251,228,0.12)}
-.ll{color:#EFDBB2;font-size:9px;font-weight:500}
+.legend{padding:10px 12px;background:#363A2E;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center}
+.li{display:flex;align-items:center;gap:4px}
+.ls{width:8px;height:8px;border-radius:2px;display:inline-block;border:1px solid rgba(252,251,228,0.12)}
+.ll{color:#EFDBB2;font-size:8px;font-weight:500}
 .footer{padding:10px 16px;text-align:center;background:#FCFBE4;border-top:1px solid rgba(239,219,178,0.3)}
 .ft{color:rgba(54,58,46,0.5);font-size:8px;letter-spacing:0.3px;line-height:2}
 .ft a{color:rgba(54,58,46,0.7);text-decoration:underline}
 @media(max-width:680px){
-  .dc{min-height:58px!important;padding:2px 2px 3px!important}.dn{font-size:10px!important}
-  .ep{padding:1px 2px!important}.ept{font-size:7px!important;max-width:50px!important}
-  .header-title{font-size:18px!important}.header-sub{font-size:7.5px!important;letter-spacing:1.5px!important}
-  .fbtn{font-size:8px!important;padding:3px 6px!important;gap:3px!important}
+  .dc{min-height:55px!important;padding:2px 2px 3px!important}.dn{font-size:10px!important}
+  .ep{padding:1px 2px!important}.ept{font-size:6.5px!important;max-width:48px!important}
+  .header-title{font-size:17px!important}.header-sub{font-size:7px!important}
+  .fbtn{font-size:7.5px!important;padding:2px 5px!important}
   .nav-btn{padding:4px 8px!important;font-size:11px!important}
-  .day-hdr{font-size:8px!important;letter-spacing:1px!important;padding:5px 2px!important}
-  .pop{max-width:210px!important;font-size:10px!important;white-space:normal!important}
+  .day-hdr{font-size:7px!important;padding:5px 1px!important}
+  .pop{max-width:200px!important;font-size:9px!important;white-space:normal!important}
   .sub-bar{flex-direction:column!important;gap:6px!important;align-items:flex-start!important}
-  .legend{gap:8px!important}.ll{font-size:8px!important}
-  .gcal-frame{height:350px!important}
 }
 </style>
 </head>
 <body>
 <div class="header"><div class="header-inner">
-  <div class="header-top"><span style="font-size:16px;opacity:0.7">&#9973;</span><span class="header-sub">Lake Roots &middot; Planning Calendar</span></div>
-  <div class="header-nav"><button class="nav-btn" id="pB">&larr;</button><h1 class="header-title" id="mL"></h1><button class="nav-btn" id="nB">&rarr;</button></div>
+<div class="header-top"><span style="font-size:16px;opacity:0.7">&#9973;</span><span class="header-sub">Lake Roots &middot; Planning Calendar</span></div>
+<div class="header-nav"><button class="nav-btn" id="pB">&larr;</button><h1 class="header-title" id="mL"></h1><button class="nav-btn" id="nB">&rarr;</button></div>
 </div></div>
 <div class="sub-bar">
-  <span class="sub-note">Tap any event for details + source link</span>
-  <a class="sub-btn" href="https://calendar.google.com/calendar/u/0?cid=Y18yNGQ5NDBjZWIxNGVjNGY3ODI3NWUwN2I4Nzc1MGJkNjIxMGMyMzY3N2RlMzkxZGMzMjFkNGZkOWI0MTM3MGUxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener">&#9973; Subscribe to LR Calendar</a>
+<span class="sub-note">Tap any event for details + source link</span>
+<a class="sub-btn" href="https://calendar.google.com/calendar/u/0?cid=Y18yNGQ5NDBjZWIxNGVjNGY3ODI3NWUwN2I4Nzc1MGJkNjIxMGMyMzY3N2RlMzkxZGMzMjFkNGZkOWI0MTM3MGUxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener">&#9973; Subscribe to LR Calendar</a>
 </div>
 <div class="filters" id="fC"></div>
 <div class="day-headers" id="dH"></div>
 <div id="cG"></div>
-
-<!-- EMBEDDED GOOGLE CALENDAR -->
 <div class="gcal-section">
-  <div class="gcal-toggle" id="gcalToggle">
-    <span class="gcal-label">&#9973; Lake Roots Events Calendar (Live)</span>
-    <span class="gcal-arrow" id="gcalArrow">&#9660;</span>
-  </div>
-  <div class="gcal-body closed" id="gcalBody">
-    <iframe class="gcal-frame" src="https://calendar.google.com/calendar/embed?src=c_24d940ceb14ec4f78275e07b87750bd6210c23677de391dc321d4fd9b41370e1%40group.calendar.google.com&ctz=America%2FChicago&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&mode=AGENDA" loading="lazy"></iframe>
-  </div>
+<div class="gcal-toggle" id="gcalToggle">
+<span class="gcal-label">&#9973; Lake Roots Events Calendar (Live)</span>
+<span class="gcal-arrow" id="gcalArrow">&#9660;</span>
 </div>
-
+<div class="gcal-body" id="gcalBody">
+<iframe style="width:100%;height:500px;border:none;background:#fff" src="https://calendar.google.com/calendar/embed?src=c_24d940ceb14ec4f78275e07b87750bd6210c23677de391dc321d4fd9b41370e1%40group.calendar.google.com&ctz=America%2FChicago&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&mode=AGENDA" loading="lazy"></iframe>
+</div>
+</div>
 <div class="legend" id="lG"></div>
 <div class="footer"><div class="ft">
-  Sources:
-  <a href="https://lakerootscl.com/events" target="_blank">Lake Roots</a> &middot;
-  <a href="https://www.thedole.org/events-list" target="_blank">The Dole</a> &middot;
-  <a href="https://www.crystallakeparks.org/calendar-of-events" target="_blank">CL Park District</a> &middot;
-  <a href="https://www.d47.org/families/calendar/school-year-calendar" target="_blank">D47</a> &middot;
-  <a href="https://www.d155.org/about/d155-upcoming-events-full-calendar" target="_blank">D155</a> &middot;
-  <a href="https://downtowncl.org/events/" target="_blank">Downtown CL</a> &middot;
-  <a href="https://business.clchamber.com/events" target="_blank">CL Chamber</a>
+Sources:
+<a href="https://lakerootscl.com/events" target="_blank">Lake Roots</a> &middot;
+<a href="https://www.thedole.org/events-list" target="_blank">The Dole</a> &middot;
+<a href="https://www.crystallakeparks.org/calendar-of-events" target="_blank">CL Park District</a> &middot;
+<a href="https://events.rauecenter.org/events/" target="_blank">Raue Center</a> &middot;
+<a href="https://www.d47.org/families/calendar/school-year-calendar" target="_blank">D47</a> &middot;
+<a href="https://www.d155.org/about/d155-upcoming-events-full-calendar" target="_blank">D155</a> &middot;
+<a href="https://www.mlb.com/cubs/schedule" target="_blank">Cubs</a> &middot;
+<a href="https://downtowncl.org/events/" target="_blank">Downtown CL</a> &middot;
+<a href="https://business.clchamber.com/events" target="_blank">CL Chamber</a>
 </div></div>
 <script>
+var U="https://www.mlb.com/cubs/schedule";var R="https://events.rauecenter.org/events/";
 var EV=[
-  // HOLIDAYS
-  {d:"2026-04-03",t:"Good Friday",c:"hol"},
-  {d:"2026-04-05",t:"Easter Sunday",c:"hol"},
-  {d:"2026-05-05",t:"Cinco de Mayo",c:"hol"},
-  {d:"2026-05-10",t:"Mother's Day",c:"hol"},
-  {d:"2026-05-25",t:"Memorial Day",c:"hol"},
-  {d:"2026-06-14",t:"Flag Day",c:"hol"},
-  {d:"2026-06-19",t:"Juneteenth",c:"hol"},
-  {d:"2026-06-21",t:"Father's Day",c:"hol"},
-  {d:"2026-07-04",t:"Independence Day",c:"hol"},
-
-  // LAKE ROOTS (lakerootscl.com/events)
-  {d:"2026-04-05",t:"LR Open Easter Wknd",c:"lr",x:"Open normal hours all Easter weekend",tm:"All day",u:"https://lakerootscl.com/events/easter"},
-  {d:"2026-04-25",t:"LR Embroidery Pop-Up",c:"lr",x:"Custom embroidery w/ Dani's Craftbook",tm:"11 AM - 2 PM",u:"https://lakerootscl.com/events/y4akziz1pv41hdwn8nxu47zsiwr7n7"},
-  {d:"2026-05-08",t:"LR Book Signing",c:"lr",x:"Amanda Schneider - Work for What's Next",tm:"2 - 5 PM",u:"https://lakerootscl.com/events/book-signing-with-amanda-schneider"},
-  {d:"2026-05-09",t:"LR Live Music: Lara Bell",c:"lr",x:"Live music, beverages & bites",tm:"12 - 3 PM",u:"https://lakerootscl.com/events/live-music-with-lara-bell-zh585"},
-  {d:"2026-05-10",t:"LR Mother's Day Brunch",c:"lr",x:"Special brunch spread - reservations open! Dinner at 4 PM.",tm:"8 AM - 3 PM",u:"https://lakerootscl.com/events/mothers-day-brunch"},
-
-  // THE DOLE
-  {d:"2026-04-19",t:"Dole Farmers Market+",c:"dole",x:"Indoor Market - 50+ farmers, food, artisans, live music",tm:"10 AM - 2 PM",u:"https://www.thedole.org/events-list"},
-  {d:"2026-04-23",t:"Dole: CLC Jazz Concert",c:"dole",x:"CL Central HS Spring Jazz - $10",tm:"3 - 9 PM",u:"https://www.thedole.org/events-list/crystal-lake-central-high-school-jazz-concert"},
-  {d:"2026-04-24",t:"Dole: 4th Fridays Art",c:"dole",x:"4 curated exhibits, 2 music stages, bar & snacks - $10",tm:"6 - 9 PM",u:"https://www.thedole.org/events-list"},
-  {d:"2026-04-26",t:"Dole Farmers Market+",c:"dole",x:"Indoor Market - last of winter season",tm:"10 AM - 2 PM",u:"https://www.thedole.org/events-list"},
-  {d:"2026-05-01",t:"Dole: John Primer Blues",c:"dole",x:"Grammy-nom'd blues icon - Benefits Senior Services",tm:"5:30 - 10 PM",u:"https://www.thedole.org/events-list/eklyffpd72ncqtgxs85006ga0kpvio"},
-  {d:"2026-05-22",t:"Dole: 4th Fridays Art",c:"dole",x:"4 curated exhibits, 2 music stages, bar & snacks - $10",tm:"6 - 9 PM",u:"https://www.thedole.org/events-list"},
-  {d:"2026-06-13",t:"Dole Outdoor Mkt Opens",c:"dole",x:"Weekly Saturdays through Sept",tm:"8 AM - 1 PM",u:"https://www.farmersmarketatthedole.org/"},
-  {d:"2026-06-26",t:"Dole: 4th Fridays Art",c:"dole",x:"4 curated exhibits, 2 music stages - $10",tm:"6 - 9 PM",u:"https://www.thedole.org/events-list"},
-  {d:"2026-07-03",t:"Lakeside Festival",c:"dole",x:"CL's biggest fest! 14 bands, carnival, food",tm:"12 - 11 PM",u:"https://www.thedole.org/the-fest"},
-  {d:"2026-07-24",t:"Dole: 4th Fridays Art",c:"dole",x:"4 curated exhibits, 2 music stages - $10",tm:"6 - 9 PM",u:"https://www.thedole.org/events-list"},
-
-  // PARK DISTRICT
-  {d:"2026-04-06",t:"PD: Batting Cages Open",c:"park",x:"Lippold Park batting cages open for season",tm:"8:30 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
-  {d:"2026-04-10",t:"PD: Moon Sound Bath",c:"park",x:"Marshmallow Moon Sound Bath Meditation",tm:"7 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/marshmallow-moon-sound-bath-meditation--april-"},
-  {d:"2026-04-11",t:"PD: Happy Horse Haven",c:"park",x:"Nature program",tm:"2 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/happy-horse-haven"},
-  {d:"2026-04-14",t:"PD: The Seeds We Eat",c:"park",x:"Nature Center educational program",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events/events/the-seeds-we-eat"},
-  {d:"2026-04-15",t:"PD: Bedtime Stories",c:"park",x:"Bedtime Stories at Barlina",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/bedtime-stories-at-barlina--april-"},
-  {d:"2026-04-17",t:"PD: Son Date Night",c:"park",x:"Son Dyno Date Night",tm:"6 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/son-dyno-date-night"},
-  {d:"2026-04-17",t:"PD: Social Dance Night",c:"park",x:"Social Dance Night with lessons",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/social-dance-night-with-lessons-2946153807-6053798124-9520486137-8794315206-2607348591"},
-  {d:"2026-04-18",t:"PD: Spring Fairy Flowers",c:"park",x:"Kids nature craft program",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events/events/spring-fairy-flowers"},
-  {d:"2026-04-23",t:"PD: Arbor Day Drop-In",c:"park",x:"Drop-in Arbor Day activity",tm:"11 AM",u:"https://www.crystallakeparks.org/calendar-of-events/events/arbor-day-drop-in"},
-  {d:"2026-04-24",t:"PD: Arbor Day Drop-In",c:"park",x:"Drop-in Arbor Day activity",tm:"11 AM",u:"https://www.crystallakeparks.org/calendar-of-events/events/arbor-day-drop-in"},
-  {d:"2026-04-25",t:"PD: Arbor Day Drop-In",c:"park",x:"Drop-in Arbor Day activity",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
-  {d:"2026-04-26",t:"PD: Puzzle Palooza",c:"park",x:"Puzzle competition - morning & afternoon",tm:"10 AM + 1:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/puzzle-palooza-morning"},
-  {d:"2026-04-27",t:"PD: When Spring Comes!",c:"park",x:"Spring nature program",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events/events/when-spring-comes-"},
-  {d:"2026-05-01",t:"PD: Social Dance Night",c:"park",x:"Social Dance Night with lessons",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
-  {d:"2026-05-03",t:"PD: Palmer House Tea",c:"park",x:"Colonel Palmer House Spring Tea: Parlor Royalties",tm:"2 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/colonel-palmer-house-spring-tea--parlor-royalties"},
-  {d:"2026-05-08",t:"PD: Dance Recital",c:"park",x:"CL Park District Dance Recital",tm:"7 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/crystal-lake-park-district-dance-recital"},
-  {d:"2026-05-15",t:"PD: Barn Dance",c:"park",x:"Barn Dance event",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/barn-dance-may-2026"},
-  {d:"2026-05-16",t:"PD: 5th Grade Formal",c:"park",x:"5th Grade Spring Formal",tm:"6 PM",u:"https://www.crystallakeparks.org/calendar-of-events/events/5th-grade-spring-formal"},
-
-  // D47 SCHOOL
-  {d:"2026-04-03",t:"D47 No School",c:"sch",x:"Non-Attendance Day",u:"https://www.d47.org/families/calendar/school-year-calendar"},
-  {d:"2026-04-22",t:"D47 Early Release",c:"sch",x:"Grades K-8 - Non-Attendance PreK",u:"https://www.d47.org/families/calendar/school-year-calendar"},
-  {d:"2026-05-13",t:"D47 Early Release",c:"sch",x:"Grades K-8 - Non-Attendance PreK",u:"https://www.d47.org/families/calendar/school-year-calendar"},
-  {d:"2026-05-20",t:"D47 Last Day PreK & K",c:"sch",x:"Last day for PreK & Kindergarten",u:"https://www.d47.org/families/calendar/school-year-calendar"},
-  {d:"2026-05-21",t:"D47 Last Day Gr 1-8",c:"sch",x:"Last day (if no emergency days)",u:"https://www.d47.org/families/calendar/school-year-calendar"},
-
-  // D155 SCHOOL
-  {d:"2026-04-04",t:"D155 Non-Attendance",c:"sch",x:"Day of Non-Attendance",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-04-06",t:"D155 School Resumes",c:"sch",x:"Back from Spring Break",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-04-20",t:"D155 Board Meeting",c:"sch",x:"7 PM - 1 S Virginia Rd",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-04-24",t:"D155 Early Release",c:"sch",x:"School Improvement Day - Early Release 12:53 PM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-05-16",t:"D155 GRADUATION",c:"sch",x:"Graduation - All Schools - 10:00 AM",tm:"10 AM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-05-18",t:"D155 Board Meeting",c:"sch",x:"7 PM - 1 S Virginia Rd",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-05-19",t:"D155 Final Exams Day 1",c:"sch",x:"Finals Schedule: Per 1, 3, 5, 7, 9",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-05-20",t:"D155 Final Exams Day 2",c:"sch",x:"Exam Day 2",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-05-25",t:"D155 No School",c:"sch",x:"Memorial Day",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-  {d:"2026-06-15",t:"D155 Board Meeting",c:"sch",x:"7 PM - 1 S Virginia Rd",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
-
-  // LOCAL
-  {d:"2026-04-18",t:"Chamber Clean-Up Day",c:"loc",x:"CL Chamber annual community clean-up",u:"https://business.clchamber.com/events"},
-  {d:"2026-05-17",t:"Car Show + Market",c:"loc",x:"Downtown CL - 10 AM-1 PM",u:"https://downtowncl.org/annual-events/"},
-  {d:"2026-06-01",t:"Chamber Golf Outing",c:"loc",x:"CL Chamber of Commerce",u:"https://business.clchamber.com/events"},
-  {d:"2026-06-20",t:"Midsummer Wine Walk",c:"loc",x:"Downtown Crystal Lake",u:"https://downtowncl.org/wine-walk/"},
-  {d:"2026-07-05",t:"Independence Parade",c:"loc",x:"Downtown Crystal Lake",u:"https://business.clchamber.com/events"}
+// HOLIDAYS
+{d:"2026-04-03",t:"Good Friday",c:"hol"},
+{d:"2026-04-05",t:"Easter Sunday",c:"hol"},
+{d:"2026-05-05",t:"Cinco de Mayo",c:"hol"},
+{d:"2026-05-10",t:"Mother's Day",c:"hol"},
+{d:"2026-05-25",t:"Memorial Day",c:"hol"},
+{d:"2026-06-14",t:"Flag Day",c:"hol"},
+{d:"2026-06-19",t:"Juneteenth",c:"hol"},
+{d:"2026-06-21",t:"Father's Day",c:"hol"},
+{d:"2026-07-04",t:"Independence Day",c:"hol"},
+// LAKE ROOTS
+{d:"2026-04-05",t:"LR Open Easter Wknd",c:"lr",x:"Open normal hours all Easter weekend",tm:"All day",u:"https://lakerootscl.com/events/easter"},
+{d:"2026-04-25",t:"LR Embroidery Pop-Up",c:"lr",x:"Custom embroidery w/ Dani's Craftbook",tm:"11 AM-2 PM",u:"https://lakerootscl.com/events/y4akziz1pv41hdwn8nxu47zsiwr7n7"},
+{d:"2026-05-08",t:"LR Book Signing",c:"lr",x:"Amanda Schneider - Work for What's Next",tm:"2-5 PM",u:"https://lakerootscl.com/events/book-signing-with-amanda-schneider"},
+{d:"2026-05-09",t:"LR Live Music: Lara Bell",c:"lr",x:"Live music, beverages & bites",tm:"12-3 PM",u:"https://lakerootscl.com/events/live-music-with-lara-bell-zh585"},
+{d:"2026-05-10",t:"LR Mother's Day Brunch",c:"lr",x:"Special brunch - reservations open! Dinner 4 PM.",tm:"8 AM-3 PM",u:"https://lakerootscl.com/events/mothers-day-brunch"},
+// THE DOLE
+{d:"2026-04-19",t:"Dole Farmers Market+",c:"dole",x:"Indoor Market - 50+ vendors, live music",tm:"10 AM-2 PM",u:"https://www.thedole.org/events-list"},
+{d:"2026-04-23",t:"Dole: CLC Jazz",c:"dole",x:"CL Central HS Jazz - $10",tm:"3-9 PM",u:"https://www.thedole.org/events-list/crystal-lake-central-high-school-jazz-concert"},
+{d:"2026-04-24",t:"Dole: 4th Fridays Art",c:"dole",x:"4 exhibits, 2 stages, bar - $10",tm:"6-9 PM",u:"https://www.thedole.org/events-list"},
+{d:"2026-04-26",t:"Dole Farmers Market+",c:"dole",x:"Indoor Market - last of season",tm:"10 AM-2 PM",u:"https://www.thedole.org/events-list"},
+{d:"2026-05-01",t:"Dole: John Primer",c:"dole",x:"Blues icon - Benefits Senior Services",tm:"5:30-10 PM",u:"https://www.thedole.org/events-list/eklyffpd72ncqtgxs85006ga0kpvio"},
+{d:"2026-05-22",t:"Dole: 4th Fridays Art",c:"dole",x:"4 exhibits, 2 stages - $10",tm:"6-9 PM",u:"https://www.thedole.org/events-list"},
+{d:"2026-06-13",t:"Dole Outdoor Mkt Opens",c:"dole",x:"Weekly Sat through Sept",tm:"8 AM-1 PM",u:"https://www.farmersmarketatthedole.org/"},
+{d:"2026-06-26",t:"Dole: 4th Fridays Art",c:"dole",x:"4 exhibits, 2 stages - $10",tm:"6-9 PM",u:"https://www.thedole.org/events-list"},
+{d:"2026-07-03",t:"Lakeside Festival",c:"dole",x:"CL's biggest fest! 14 bands, carnival",tm:"12-11 PM",u:"https://www.thedole.org/the-fest"},
+{d:"2026-07-24",t:"Dole: 4th Fridays Art",c:"dole",x:"4 exhibits, 2 stages - $10",tm:"6-9 PM",u:"https://www.thedole.org/events-list"},
+// PARK DISTRICT
+{d:"2026-04-10",t:"PD: Moon Sound Bath",c:"park",x:"Marshmallow Moon Meditation",tm:"7 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-11",t:"PD: Happy Horse Haven",c:"park",tm:"2 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-14",t:"PD: Seeds We Eat",c:"park",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-15",t:"PD: Bedtime Stories",c:"park",x:"At Barlina",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-17",t:"PD: Son Date Night",c:"park",tm:"6 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-17",t:"PD: Social Dance",c:"park",x:"With lessons",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-18",t:"PD: Spring Fairy Flowers",c:"park",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-23",t:"PD: Arbor Day Drop-In",c:"park",tm:"11 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-24",t:"PD: Arbor Day Drop-In",c:"park",tm:"11 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-25",t:"PD: Arbor Day Drop-In",c:"park",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-26",t:"PD: Puzzle Palooza",c:"park",tm:"10 AM+1:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-04-27",t:"PD: When Spring Comes",c:"park",tm:"10 AM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-05-01",t:"PD: Social Dance",c:"park",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-05-03",t:"PD: Palmer House Tea",c:"park",x:"Parlor Royalties",tm:"2 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-05-08",t:"PD: Dance Recital",c:"park",tm:"7 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-05-15",t:"PD: Barn Dance",c:"park",tm:"6:30 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+{d:"2026-05-16",t:"PD: 5th Grade Formal",c:"park",tm:"6 PM",u:"https://www.crystallakeparks.org/calendar-of-events"},
+// RAUE CENTER
+{d:"2026-04-18",t:"Raue: GreenRoom Improv",c:"raue",x:"Clean high-energy improv comedy",tm:"8 PM",u:R},
+{d:"2026-05-01",t:"Raue: Rod Stewart Tribute",c:"raue",x:"Doug - soulful vocals & charm",tm:"8 PM",u:R},
+{d:"2026-05-02",t:"Raue: Think Floyd USA",c:"raue",x:"Pink Floyd tribute - 9-piece ensemble",tm:"7 PM",u:R},
+{d:"2026-05-03",t:"Raue: Run for the Arts",c:"raue",x:"Bob Blazier 5K Run/Walk",tm:"AM",u:R},
+{d:"2026-05-08",t:"Raue: Comedy Night",c:"raue",x:"4 sharp women of stand-up",tm:"8 PM",u:R},
+{d:"2026-05-09",t:"Raue: Foreigner Tribute",c:"raue",x:"Full-production rock tribute",tm:"8 PM",u:R},
+{d:"2026-05-15",t:"Raue: Open Mic Night",c:"raue",x:"Storytelling, comedy, poetry, music - FREE",tm:"7 PM",u:R},
+{d:"2026-05-16",t:"Raue: RIO Duran Duran",c:"raue",x:"Ultimate 80s tribute",tm:"8 PM",u:R},
+{d:"2026-05-22",t:"Raue: Robbie Fulks",c:"raue",x:"Americana, folk rock, bluegrass",tm:"8 PM",u:R},
+{d:"2026-05-29",t:"Raue: Paula Poundstone",c:"raue",x:"NPR favorite - razor-sharp wit",tm:"8 PM",u:R},
+{d:"2026-06-05",t:"Raue: Show TBA",c:"raue",tm:"8 PM",u:R},
+{d:"2026-06-12",t:"Raue: Comedy Night",c:"raue",tm:"8 PM",u:R},
+{d:"2026-06-13",t:"Raue: Show TBA",c:"raue",tm:"7 PM",u:R},
+{d:"2026-06-19",t:"Raue: Father's Day Comedy",c:"raue",x:"Dad jokes & family chaos - Ted Wilson + headliners",tm:"8 PM",u:R},
+// SCHOOL D47
+{d:"2026-04-03",t:"D47 No School",c:"sch",x:"Non-Attendance Day",u:"https://www.d47.org/families/calendar/school-year-calendar"},
+{d:"2026-04-22",t:"D47 Early Release",c:"sch",u:"https://www.d47.org/families/calendar/school-year-calendar"},
+{d:"2026-05-13",t:"D47 Early Release",c:"sch",u:"https://www.d47.org/families/calendar/school-year-calendar"},
+{d:"2026-05-20",t:"D47 Last Day PreK/K",c:"sch",u:"https://www.d47.org/families/calendar/school-year-calendar"},
+{d:"2026-05-21",t:"D47 Last Day Gr 1-8",c:"sch",u:"https://www.d47.org/families/calendar/school-year-calendar"},
+// SCHOOL D155
+{d:"2026-04-04",t:"D155 Non-Attendance",c:"sch",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-04-06",t:"D155 School Resumes",c:"sch",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-04-20",t:"D155 Board Meeting",c:"sch",tm:"7 PM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-04-24",t:"D155 Early Release",c:"sch",x:"School Improvement Day 12:53 PM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-05-16",t:"D155 GRADUATION",c:"sch",x:"All Schools",tm:"10 AM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-05-18",t:"D155 Board Meeting",c:"sch",tm:"7 PM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-05-19",t:"D155 Finals Day 1",c:"sch",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-05-20",t:"D155 Finals Day 2",c:"sch",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-05-25",t:"D155 No School",c:"sch",x:"Memorial Day",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+{d:"2026-06-15",t:"D155 Board Meeting",c:"sch",tm:"7 PM",u:"https://www.d155.org/about/d155-upcoming-events-full-calendar"},
+// LOCAL
+{d:"2026-04-18",t:"Chamber Clean-Up Day",c:"loc",u:"https://business.clchamber.com/events"},
+{d:"2026-05-17",t:"Car Show + Market",c:"loc",x:"Downtown CL 10 AM-1 PM",u:"https://downtowncl.org/annual-events/"},
+{d:"2026-06-01",t:"Chamber Golf Outing",c:"loc",u:"https://business.clchamber.com/events"},
+{d:"2026-06-20",t:"Midsummer Wine Walk",c:"loc",x:"Downtown Crystal Lake",u:"https://downtowncl.org/wine-walk/"},
+{d:"2026-07-05",t:"Independence Parade",c:"loc",u:"https://business.clchamber.com/events"},
+// CUBS (H=Home @ Wrigley, A=Away)
+{d:"2026-04-17",t:"Cubs vs NYM",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-04-18",t:"Cubs vs NYM",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-04-19",t:"Cubs vs NYM",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-04-20",t:"Cubs vs PHI",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-04-21",t:"Cubs vs PHI",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-04-22",t:"Cubs vs PHI",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-04-23",t:"Cubs vs PHI",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-04-24",t:"Cubs @ LAD",c:"cubs",x:"Away",tm:"9:10",u:U},{d:"2026-04-25",t:"Cubs @ LAD",c:"cubs",x:"Away",tm:"6:15",u:U},{d:"2026-04-26",t:"Cubs @ LAD",c:"cubs",x:"Away",tm:"3:10",u:U},
+{d:"2026-04-27",t:"Cubs @ SD",c:"cubs",x:"Away",tm:"8:40",u:U},{d:"2026-04-28",t:"Cubs @ SD",c:"cubs",x:"Away",tm:"8:40",u:U},{d:"2026-04-29",t:"Cubs @ SD",c:"cubs",x:"Away",tm:"3:10",u:U},
+{d:"2026-05-01",t:"Cubs vs AZ",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-05-02",t:"Cubs vs AZ",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-05-03",t:"Cubs vs AZ",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-05-04",t:"Cubs vs CIN",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-05-05",t:"Cubs vs CIN",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-05-06",t:"Cubs vs CIN",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-05-07",t:"Cubs vs CIN",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-05-08",t:"Cubs @ TEX",c:"cubs",x:"Away",tm:"7:05",u:U},{d:"2026-05-09",t:"Cubs @ TEX",c:"cubs",x:"Away",tm:"6:05",u:U},{d:"2026-05-10",t:"Cubs @ TEX",c:"cubs",x:"Away",tm:"1:35",u:U},
+{d:"2026-05-12",t:"Cubs @ ATL",c:"cubs",x:"Away",tm:"6:15",u:U},{d:"2026-05-13",t:"Cubs @ ATL",c:"cubs",x:"Away",tm:"6:15",u:U},{d:"2026-05-14",t:"Cubs @ ATL",c:"cubs",x:"Away",tm:"6:15",u:U},
+{d:"2026-05-15",t:"Cubs @ CWS",c:"cubs",x:"Away",tm:"6:40",u:U},{d:"2026-05-16",t:"Cubs @ CWS",c:"cubs",x:"Away",tm:"6:10",u:U},{d:"2026-05-17",t:"Cubs @ CWS",c:"cubs",x:"Away",tm:"1:10",u:U},
+{d:"2026-05-18",t:"Cubs vs MIL",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-05-19",t:"Cubs vs MIL",c:"cubs",x:"Home",tm:"6:40",u:U},{d:"2026-05-20",t:"Cubs vs MIL",c:"cubs",x:"Home",tm:"6:40",u:U},
+{d:"2026-05-22",t:"Cubs vs HOU",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-05-23",t:"Cubs vs HOU",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-05-24",t:"Cubs vs HOU",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-05-25",t:"Cubs @ PIT",c:"cubs",x:"Away",tm:"5:40",u:U},{d:"2026-05-26",t:"Cubs @ PIT",c:"cubs",x:"Away",tm:"5:40",u:U},{d:"2026-05-27",t:"Cubs @ PIT",c:"cubs",x:"Away",tm:"5:40",u:U},{d:"2026-05-28",t:"Cubs @ PIT",c:"cubs",x:"Away",tm:"5:40",u:U},
+{d:"2026-05-29",t:"Cubs @ STL",c:"cubs",x:"Away",tm:"7:15",u:U},{d:"2026-05-30",t:"Cubs @ STL",c:"cubs",x:"Away",tm:"6:15",u:U},{d:"2026-05-31",t:"Cubs @ STL",c:"cubs",x:"Away",tm:"6:20",u:U},
+{d:"2026-06-02",t:"Cubs vs OAK",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-06-03",t:"Cubs vs OAK",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-06-04",t:"Cubs vs OAK",c:"cubs",x:"Home",tm:"7:05",u:U},
+{d:"2026-06-05",t:"Cubs vs SF",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-06-06",t:"Cubs vs SF",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-06-07",t:"Cubs vs SF",c:"cubs",x:"Home",tm:"7:20",u:U},
+{d:"2026-06-09",t:"Cubs @ COL",c:"cubs",x:"Away",tm:"7:40",u:U},{d:"2026-06-10",t:"Cubs @ COL",c:"cubs",x:"Away",tm:"7:40",u:U},{d:"2026-06-11",t:"Cubs @ COL",c:"cubs",x:"Away",tm:"2:10",u:U},
+{d:"2026-06-12",t:"Cubs @ SF",c:"cubs",x:"Away",tm:"9:15",u:U},{d:"2026-06-13",t:"Cubs @ SF",c:"cubs",x:"Away",tm:"9:05",u:U},{d:"2026-06-14",t:"Cubs @ SF",c:"cubs",x:"Away",tm:"2:10",u:U},
+{d:"2026-06-15",t:"Cubs vs COL",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-06-16",t:"Cubs vs COL",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-06-17",t:"Cubs vs COL",c:"cubs",x:"Home",tm:"7:05",u:U},
+{d:"2026-06-19",t:"Cubs vs TOR",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-06-20",t:"Cubs vs TOR",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-06-21",t:"Cubs vs TOR",c:"cubs",x:"Home",tm:"1:20",u:U},
+{d:"2026-06-22",t:"Cubs @ NYM",c:"cubs",x:"Away",tm:"6:10",u:U},{d:"2026-06-23",t:"Cubs @ NYM",c:"cubs",x:"Away",tm:"6:10",u:U},{d:"2026-06-24",t:"Cubs @ NYM",c:"cubs",x:"Away",tm:"6:10",u:U},{d:"2026-06-25",t:"Cubs @ NYM",c:"cubs",x:"Away",tm:"6:10",u:U},
+{d:"2026-06-26",t:"Cubs @ MIL",c:"cubs",x:"Away",tm:"6:40",u:U},{d:"2026-06-27",t:"Cubs @ MIL",c:"cubs",x:"Away",tm:"6:10",u:U},{d:"2026-06-28",t:"Cubs @ MIL",c:"cubs",x:"Away",tm:"1:10",u:U},
+{d:"2026-06-29",t:"Cubs vs STL",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-06-30",t:"Cubs vs STL",c:"cubs",x:"Home",tm:"7:05",u:U},{d:"2026-07-01",t:"Cubs vs STL",c:"cubs",x:"Home",tm:"7:05",u:U},
+{d:"2026-07-03",t:"Cubs vs CWS",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-07-04",t:"Cubs vs CWS",c:"cubs",x:"Home",tm:"1:20",u:U},{d:"2026-07-05",t:"Cubs vs CWS",c:"cubs",x:"Home",tm:"1:20",u:U}
 ];
 var C={
-  hol: {l:"Holidays",cl:"#B68036",bg:"rgba(182,128,54,0.10)",ic:"\u2726"},
-  lr:  {l:"Lake Roots",cl:"#363A2E",bg:"rgba(54,58,46,0.10)",ic:"\u26F5"},
-  dole:{l:"The Dole",cl:"#8B6F52",bg:"rgba(139,111,82,0.10)",ic:"\uD83C\uDFDB"},
-  park:{l:"Park District",cl:"#4A7C59",bg:"rgba(74,124,89,0.10)",ic:"\uD83C\uDF33"},
-  sch: {l:"School (D47/155)",cl:"#5B7A6F",bg:"rgba(91,122,111,0.10)",ic:"\u25C6"},
-  loc: {l:"Local Events",cl:"#7EA9A1",bg:"rgba(126,169,161,0.12)",ic:"\u25CF"}
+hol:{l:"Holidays",cl:"#B68036",bg:"rgba(182,128,54,0.10)",ic:"\u2726"},
+lr:{l:"Lake Roots",cl:"#363A2E",bg:"rgba(54,58,46,0.10)",ic:"\u26F5"},
+dole:{l:"The Dole",cl:"#8B6F52",bg:"rgba(139,111,82,0.10)",ic:"\uD83C\uDFDB"},
+park:{l:"Park District",cl:"#4A7C59",bg:"rgba(74,124,89,0.10)",ic:"\uD83C\uDF33"},
+raue:{l:"Raue Center",cl:"#8B4F6F",bg:"rgba(139,79,111,0.10)",ic:"\uD83C\uDFAD"},
+sch:{l:"School (D47/155)",cl:"#5B7A6F",bg:"rgba(91,122,111,0.10)",ic:"\u25C6"},
+loc:{l:"Local Events",cl:"#7EA9A1",bg:"rgba(126,169,161,0.12)",ic:"\u25CF"},
+cubs:{l:"Cubs",cl:"#0E3386",bg:"rgba(14,51,134,0.08)",ic:"\u26BE"},
+bears:{l:"Bears/Bulls",cl:"#C83200",bg:"rgba(200,50,0,0.08)",ic:"\uD83C\uDFC8"}
 };
 var MN=["January","February","March","April","May","June","July","August","September","October","November","December"];
 var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-var S={f:{hol:1,lr:1,dole:1,park:1,sch:1,loc:1},o:0,p:null};
+var S={f:{hol:1,lr:1,dole:1,park:1,raue:1,sch:1,loc:1,cubs:0,bears:0},o:0,p:null};
 function fk(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 function gw(y,m){var f=new Date(y,m,1),l=new Date(y,m+1,0),w=[],c=new Date(f);c.setDate(c.getDate()-c.getDay());while(c<=l||c.getDay()!==0){var r=[];for(var i=0;i<7;i++){r.push(new Date(c));c.setDate(c.getDate()+1)}w.push(r);if(c>l&&c.getDay()===0)break}return w}
 function gm(){var m=3+S.o,y=2026;while(m>11){m-=12;y++}while(m<0){m+=12;y--}return{m:m,y:y}}
-function rF(){var c=document.getElementById("fC");c.innerHTML="";var ks=Object.keys(C);for(var i=0;i<ks.length;i++){(function(k){var v=C[k],on=S.f[k],b=document.createElement("button");b.className="fbtn";b.style.border="2px solid "+v.cl;b.style.background=on?v.cl:"transparent";b.style.color=on?"#FCFBE4":v.cl;b.style.opacity=on?"1":"0.45";b.innerHTML='<span style="font-size:8px">'+v.ic+"</span>"+v.l;b.onclick=function(){S.f[k]=S.f[k]?0:1;rF();rG()};c.appendChild(b)})(ks[i])}}
+function rF(){var c=document.getElementById("fC");c.innerHTML="";var ks=Object.keys(C);for(var i=0;i<ks.length;i++){(function(k){var v=C[k],on=S.f[k],b=document.createElement("button");b.className="fbtn";b.style.border="2px solid "+v.cl;b.style.background=on?v.cl:"transparent";b.style.color=on?"#FCFBE4":v.cl;b.style.opacity=on?"1":"0.4";b.innerHTML='<span style="font-size:7px">'+v.ic+"</span>"+v.l;b.onclick=function(){S.f[k]=S.f[k]?0:1;rF();rG()};c.appendChild(b)})(ks[i])}}
 function rD(){var c=document.getElementById("dH");c.innerHTML="";for(var i=0;i<DN.length;i++){var d=document.createElement("div");d.className="day-hdr";d.textContent=DN[i];c.appendChild(d)}}
 function rH(){var cm=gm();document.getElementById("mL").innerHTML=MN[cm.m]+" <b>"+cm.y+"</b>"}
 function gem(){var m={};for(var i=0;i<EV.length;i++){var e=EV[i];if(!S.f[e.c])continue;if(!m[e.d])m[e.d]=[];m[e.d].push(e)}return m}
@@ -225,14 +256,7 @@ if(ev.u){var pa=document.createElement("a");pa.className="pop-l";pa.href=ev.u;pa
 pl.appendChild(po)}ed.appendChild(pl)})(evs[ei],key+"-"+ei)}
 cl.appendChild(ed);wd.appendChild(cl)}cg.appendChild(wd)}}
 function rL(){var c=document.getElementById("lG");c.innerHTML="";var ks=Object.keys(C);for(var i=0;i<ks.length;i++){var k=ks[i],v=C[k],it=document.createElement("div");it.className="li";var sw=document.createElement("span");sw.className="ls";sw.style.background=v.cl;var lb=document.createElement("span");lb.className="ll";lb.textContent=v.l;it.appendChild(sw);it.appendChild(lb);c.appendChild(it)}}
-
-// Google Calendar toggle
-document.getElementById("gcalToggle").onclick=function(){
-  var b=document.getElementById("gcalBody"),a=document.getElementById("gcalArrow");
-  if(b.classList.contains("closed")){b.classList.remove("closed");b.classList.add("open");a.classList.add("open")}
-  else{b.classList.remove("open");b.classList.add("closed");a.classList.remove("open")}
-};
-
+document.getElementById("gcalToggle").onclick=function(){var b=document.getElementById("gcalBody"),a=document.getElementById("gcalArrow");if(b.classList.contains("open")){b.classList.remove("open");a.classList.remove("open")}else{b.classList.add("open");a.classList.add("open")}};
 document.getElementById("pB").onclick=function(){S.o--;S.p=null;rG()};
 document.getElementById("nB").onclick=function(){S.o++;S.p=null;rG()};
 document.onclick=function(){if(S.p!==null){S.p=null;rG()}};
