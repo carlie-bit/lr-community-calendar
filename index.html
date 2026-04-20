@@ -106,6 +106,13 @@ var EV=[
 {d:"2026-06-19",t:"Juneteenth",c:"hol"},
 {d:"2026-06-21",t:"Father's Day",c:"hol"},
 {d:"2026-07-04",t:"Independence Day",c:"hol"},
+// LAKE ROOTS (static from lakerootscl.com - Google Calendar adds more live)
+{d:"2026-04-05",t:"LR Open Easter Wknd",c:"lr",x:"Open normal hours all Easter weekend",tm:"All day",u:"https://lakerootscl.com/events/easter"},
+{d:"2026-04-25",t:"LR Embroidery Pop-Up",c:"lr",x:"Custom embroidery w/ Dani's Craftbook",tm:"11 AM-2 PM",u:"https://lakerootscl.com/events/y4akziz1pv41hdwn8nxu47zsiwr7n7"},
+{d:"2026-05-08",t:"LR Book Signing",c:"lr",x:"Amanda Schneider - Work for What's Next",tm:"2-5 PM",u:"https://lakerootscl.com/events/book-signing-with-amanda-schneider"},
+{d:"2026-05-09",t:"LR Live Music: Lara Bell",c:"lr",x:"Live music, beverages & bites",tm:"12-3 PM",u:"https://lakerootscl.com/events/live-music-with-lara-bell-zh585"},
+{d:"2026-05-09",t:"LR Live Music: Lara Bell",c:"lr",x:"Live music, beverages & bites",tm:"12-3 PM",u:"https://lakerootscl.com/events/live-music-with-lara-bell-zh585"},
+{d:"2026-05-10",t:"LR Mother's Day Brunch",c:"lr",x:"Special brunch - reservations open! Dinner 4 PM.",tm:"8 AM-3 PM",u:"https://lakerootscl.com/events/mothers-day-brunch"},
 // THE DOLE
 {d:"2026-04-19",t:"Dole Farmers Market+",c:"dole",x:"Indoor Market - 50+ vendors, live music",tm:"10 AM-2 PM",u:"https://www.thedole.org/events-list"},
 {d:"2026-04-23",t:"Dole: CLC Jazz",c:"dole",x:"CL Central HS Jazz - $10",tm:"3-9 PM",u:"https://www.thedole.org/events-list/crystal-lake-central-high-school-jazz-concert"},
@@ -211,12 +218,12 @@ bears:{l:"Bears/Bulls",cl:"#C83200",bg:"rgba(200,50,0,0.08)",ic:"\uD83C\uDFC8"}
 };
 var MN=["January","February","March","April","May","June","July","August","September","October","November","December"];
 var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
-var S={f:{hol:1,lr:1,dole:1,park:1,raue:1,sch:1,loc:1,cubs:0,bears:0},o:0,p:null};
+var S={f:{hol:0,lr:1,dole:0,park:0,raue:0,sch:0,loc:0,cubs:0,bears:0},o:0,p:null};
 
 function fk(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
 function gw(y,m){var f=new Date(y,m,1),l=new Date(y,m+1,0),w=[],c=new Date(f);c.setDate(c.getDate()-c.getDay());while(c<=l||c.getDay()!==0){var r=[];for(var i=0;i<7;i++){r.push(new Date(c));c.setDate(c.getDate()+1)}w.push(r);if(c>l&&c.getDay()===0)break}return w}
 function gm(){var m=3+S.o,y=2026;while(m>11){m-=12;y++}while(m<0){m+=12;y--}return{m:m,y:y}}
-function rF(){var c=document.getElementById("fC");c.innerHTML="";var ks=Object.keys(C);for(var i=0;i<ks.length;i++){(function(k){var v=C[k],on=S.f[k],b=document.createElement("button");b.className="fbtn";b.style.border="2px solid "+v.cl;b.style.background=on?v.cl:"transparent";b.style.color=on?"#FCFBE4":v.cl;b.style.opacity=on?"1":"0.4";b.innerHTML='<span style="font-size:7px">'+v.ic+"</span>"+v.l;b.onclick=function(){S.f[k]=S.f[k]?0:1;rF();rG()};c.appendChild(b)})(ks[i])}}
+function rF(){var c=document.getElementById("fC");c.innerHTML="";var ks=Object.keys(C);var allOn=true;for(var j=0;j<ks.length;j++){if(!S.f[ks[j]]){allOn=false;break}}var ab=document.createElement("button");ab.className="fbtn";ab.style.border="2px solid #B68036";ab.style.background=allOn?"#B68036":"transparent";ab.style.color=allOn?"#FCFBE4":"#B68036";ab.style.opacity="1";ab.style.fontWeight="700";ab.innerHTML=allOn?"\u2716 Clear All":"\u2605 Show All";ab.onclick=function(){var val=allOn?0:1;for(var j=0;j<ks.length;j++){S.f[ks[j]]=val}rF();rG()};c.appendChild(ab);for(var i=0;i<ks.length;i++){(function(k){var v=C[k],on=S.f[k],b=document.createElement("button");b.className="fbtn";b.style.border="2px solid "+v.cl;b.style.background=on?v.cl:"transparent";b.style.color=on?"#FCFBE4":v.cl;b.style.opacity=on?"1":"0.4";b.innerHTML='<span style="font-size:7px">'+v.ic+"</span>"+v.l;b.onclick=function(){S.f[k]=S.f[k]?0:1;rF();rG()};c.appendChild(b)})(ks[i])}}
 function rD(){var c=document.getElementById("dH");c.innerHTML="";for(var i=0;i<DN.length;i++){var d=document.createElement("div");d.className="day-hdr";d.textContent=DN[i];c.appendChild(d)}}
 function rH(){var cm=gm();document.getElementById("mL").innerHTML=MN[cm.m]+" <b>"+cm.y+"</b>"}
 function gem(){var m={};for(var i=0;i<EV.length;i++){var e=EV[i];if(!S.f[e.c])continue;if(!m[e.d])m[e.d]=[];m[e.d].push(e)}return m}
@@ -245,7 +252,7 @@ function rL(){var c=document.getElementById("lG");c.innerHTML="";var ks=Object.k
 function fetchLREvents(){
   var now=new Date();
   var minDate=new Date(now.getFullYear(),now.getMonth()-1,1).toISOString();
-  var maxDate=new Date(now.getFullYear(),now.getMonth()+6,0).toISOString();
+  var maxDate=new Date(now.getFullYear()+2,now.getMonth(),0).toISOString();
   var url="https://www.googleapis.com/calendar/v3/calendars/"+encodeURIComponent(GCAL_ID)+"/events?key="+GCAL_KEY+"&timeMin="+minDate+"&timeMax="+maxDate+"&singleEvents=true&orderBy=startTime&maxResults=250";
 
   fetch(url).then(function(r){return r.json()}).then(function(data){
